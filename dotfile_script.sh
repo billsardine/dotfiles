@@ -10,36 +10,36 @@ brew install mdcat
 brew install python3
 brew install python
 brew install pipenv
-brew install iperf
-brew install iperf3
+# brew install iperf
+# brew install iperf3
 brew install openssl
 brew install wget
 brew install bmon
-brew install wireshark
+# brew install wireshark
 brew install fzf
 brew install fx
 brew install bat
 # Cask Utilities
-brew cask install iterm2
+# brew cask install iterm2
 # Terriform install
 # brew tap hashicorp/tap
 # brew install hashicorp/tap/terraform
 # Cask Apps
-brew cask install 1password
+# brew cask install 1password
 # brew cask install muzzle
 # brew cask install sublime-text
 # brew cask install tunnelblick
-brew cask install google-chrome
+# brew cask install google-chrome
 # brew cask install postman
 # brew cask install cryptomator
 # brew cask install wireshark
 # brew cask install todoist
-brew cask install adobe-acrobat-reader
-brew cask install angry-ip-scanner
-brew cask install vmware-remote-console
-brew cask install onyx
-brew cask install java
-brew cask install visual-studio-code
+brew install --cask adobe-acrobat-reader
+brew install --cask angry-ip-scanner
+# brew cask install vmware-remote-console
+brew install --cask  onyx
+brew install --cask  java
+brew install --cask  visual-studio-code
 # brew cask install telegram
 # Need to actually run the script to install aliases/keybindings
 /usr/local/opt/fzf/install
