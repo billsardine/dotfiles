@@ -113,3 +113,7 @@ SPACESHIP_TIME_12HR=true
 SPACESHIP_TIME_SHOW=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/rpope/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
