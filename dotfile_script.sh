@@ -19,6 +19,7 @@ brew install bmon
 brew install fzf
 brew install fx
 brew install bat
+brew install stats
 # Cask Utilities
 # brew cask install iterm2
 # Terriform install
