@@ -31,6 +31,7 @@ brew install --cask logi-options-plus
 brew install wireguard-tools
 brew install --cask slack
 brew install --cask 1password-cli
+brew install --cask microsoft-remote-desktop
 # Work Apps
 brew install --cask logitune
 # Personal Apps

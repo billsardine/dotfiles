@@ -2,12 +2,9 @@
 
 ## Apps to install
 
-- rancher desktop 
-- Microsoft Remote Desktop <https://apps.apple.com/us/app/microsoft-remote-desktop-10/id1295203466?mt=12>
-- Microsoft One Note
 - Magnet  <https://apps.apple.com/us/app/magnet/id441258766?mt=12>
-- brother iprint and scan
-- todist
+- brother iprint and scan - <https://apps.apple.com/us/app/brother-iprint-scan/id1193539993?mt=12\>
+
 
 ## Configuration Tasks
 
@@ -27,4 +24,4 @@ set Onyx Settings
 Setup scaled fonts for laptop
 
 Setup Slack
-add channels%
+add channels
