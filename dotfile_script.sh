@@ -3,8 +3,9 @@
 # sudo bash -c "echo net.inet.ip.ttl=65 >> /etc/sysctl.conf"
 # Homebrew Script for OSX setup
 echo "Installing brew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # Extensions & utilities See notes for descriptions
+echo "Installing Apps via Brew..."
 brew install tig
 brew install mdcat
 brew install python3
@@ -32,6 +33,7 @@ brew install wireguard-tools
 brew install --cask slack
 brew install --cask 1password-cli
 brew install --cask microsoft-remote-desktop
+brew install --cask obsidian
 # Work Apps
 brew install --cask logitune
 # Personal Apps
