@@ -9,7 +9,7 @@ Install Brew
 ```
 https://brew.sh/
 ```
-Dont forget to set the path after brew install or the dofitle install script will not get the brew items.
+Dont forget to set the path after brew install or the dotfile install script will not get the brew items.
 
 Run installer script
 ```
