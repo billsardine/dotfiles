@@ -74,7 +74,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   docker-compose
-  github
+  gh
 )
 source $ZSH/oh-my-zsh.sh
 

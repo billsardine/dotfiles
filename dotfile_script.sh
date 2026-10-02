@@ -1,9 +1,5 @@
 #!/bin/sh
-# Change TTL to 65
-# sudo bash -c "echo net.inet.ip.ttl=65 >> /etc/sysctl.conf"
-# Homebrew Script for OSX setup
-echo "Installing brew..."
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # Extensions & utilities See notes for descriptions
 echo "Installing Apps via Brew..."
 brew install tig
@@ -17,30 +13,30 @@ brew install bmon
 brew install fx
 brew install bat
 brew install stats
+
 # Common Apps
-brew install --cask hiddenbar 
 brew install --cask iterm2
 brew install --cask todoist
-brew install --cask 1password
-brew install --cask adobe-acrobat-reader
-brew install --cask onyx
-brew install --cask java
 brew install --cask visual-studio-code
-brew install --cask google-chrome
-brew install --cask google-drive
 brew install --cask logi-options-plus
-brew install wireguard-tools
-brew install --cask slack
 brew install --cask 1password-cli
-brew install --cask microsoft-remote-desktop
 brew install --cask obsidian
-# Work Apps
+brew install --cask bruno
 brew install --cask logitune
+# brew install --cask 1password
+# brew install --cask microsoft-remote-desktop
+# brew install wireguard-tools
+
+# Work Apps
+
 # Personal Apps
-brew install --cask focusrite-control
-brew install --cask fl-studio
-brew install --cask steam
-brew install --cask cryptomator
+# brew install --cask slack
+# brew install --cask google-drive
+# brew install --cask focusrite-control
+# brew install --cask fl-studio
+# brew install --cask steam
+# brew install --cask cryptomator
+
 # Special Install Apps
 # brew install --cask postman
 # brew install --cask wireshark
@@ -67,17 +63,24 @@ cd fonts
 ./install.sh
 cd ..
 sudo rm -rf fonts
-# echo "Pulling dot files"
-# sudo git clone ssh://admin@192.168.0.25/volume1/git/dotfiles ~/dotfiles
 # setup zsh enviroment
 sudo rm ~/.zshrc
 sudo ln -s ~/dotfiles/.zshrc ~/.zshrc
-# setup iterm2
-sudo rm ~/.iterm2_profile
-sudo ln -s ~/dotfiles/.iterm2_profile ~/.iterm2_profile
-# setup ssh
-sudo cp  ~/dotfiles/.ssh/config /.ssh/
-sudo chmod 600 ~/.ssh/config
 # set default shell to zsh
 chsh -s $(which zsh)
+
+# setup iterm2
+# Point iTerm2 to your transferred preferences directory
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Instruct iTerm2 to load from that custom folder
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# Set git
+ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
+
+# Set finder settings
+# Show dot files in finder
+defaults write com.apple.finder AppleShowAllFiles true
+
+
 mdcat ~/dotfiles/post_install.md
