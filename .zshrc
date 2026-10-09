@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+GLOBAL_ENV="$HOME/.env"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,13 +108,20 @@ source $ZSH/oh-my-zsh.sh
 #alias config='git --git-dir=$HOME/.randycfg/ --work-tree=$HOME'
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 alias weather='curl v2.wttr.in'
-alias raws='docker run --rm -it amazon/aws-cli'
 
 SPACESHIP_TIME_12HR=true
 SPACESHIP_TIME_SHOW=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/rpope/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export PATH="$HOME/.local/bin:$PATH"
+
+# import ~/.env variables requires GLOBAL_ENV="$HOME/.env" in the config
+
+ if [ -f "$GLOBAL_ENV" ]; then
+  while IFS= read -r line || [ -n "$line" ]; do
+    # Skip empty lines and comments
+    [[ "$line" =~ ^#.*$ ]] || [[ -z "$line" ]] && continue
+    export "$line"
+  done < "$GLOBAL_ENV"
+ fi
