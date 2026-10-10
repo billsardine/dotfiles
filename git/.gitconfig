@@ -1,0 +1,51 @@
+# Identity & Auth
+# ---------------
+
+[user]
+  name = Randy Pope
+  email = randy.pope@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB8IH78u0ewDYPElZInKOaEmywFXZZEPWR7IdvP46FtJ
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[hub]
+  protocol = ssh
+
+
+# Core Settings
+# -------------
+
+[core]
+  excludesfile = ~/dotfiles/git/.gitignore
+  pager = delta
+
+[push]
+  default = simple
+  followTags = true
+
+[pull]
+  rebase = true
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[delta]
+  navigate = true
+  line-numbers = true
+  side-by-side = false
