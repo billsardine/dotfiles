@@ -23,6 +23,7 @@ brew install --cask 1password-cli
 brew install --cask obsidian
 brew install --cask bruno
 brew install --cask logitune
+brew install --cask font-powerline-symbols
 # brew install --cask 1password
 # brew install --cask microsoft-remote-desktop
 # brew install wireguard-tools
