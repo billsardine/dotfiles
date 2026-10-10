@@ -13,6 +13,7 @@ brew install bmon
 brew install fx
 brew install bat
 brew install stats
+brew install git-delta
 
 # Common Apps
 brew install --cask iterm2
